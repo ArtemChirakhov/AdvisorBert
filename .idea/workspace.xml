@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abecfdd3-2277-404b-b8f6-a2b3ca112265" name="Changes" comment="" />
+    <list default="true" id="abecfdd3-2277-404b-b8f6-a2b3ca112265" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2UOkGeiSWPNMSmM6MshLMEm6H46" />
   <component name="ProjectViewState">

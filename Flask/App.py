@@ -7,7 +7,7 @@
 import time
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='build', static_url_path='/')
 searchResults = {'doctor': [{'info': {'name': "Billy Jones", 'description': "adghdgfgsfgfgaf", 'rating': 1, 'link': "ya.ru"}, 'lat': 18.52043, 'lng': 73.856743 }, {'info': {'name': "MD. Popov", 'description': "Greatest Medical Doctor Ever", 'rating': 100, 'link': "ya.ru"}, 'lat': 0, 'lng': 0 }], 
 'scientist': [{'info': {'name': "Albert Einstein", 'description': "Greatest Scientist Ever", 'rating': 10, 'link': "https://ya.ru"}, 'lat': 23.52043, 'lng': 34.856743 }]}
 
