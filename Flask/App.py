@@ -18,3 +18,4 @@ def get_current_time():
 @app.route('/search/<searchQuery>')
 def get_current_search(searchQuery):
     return searchResults[searchQuery]
+
