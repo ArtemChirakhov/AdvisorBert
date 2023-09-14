@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abecfdd3-2277-404b-b8f6-a2b3ca112265" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cursor.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Projet1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flask/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenAlexTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/OpenAlexTest.py" afterDir="false" />
-    </list>
+    <list default="true" id="abecfdd3-2277-404b-b8f6-a2b3ca112265" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,9 +20,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectId" id="2UOkGeiSWPNMSmM6MshLMEm6H46" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,7 +29,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/achir/PycharmProjects/venv&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/artemchirakhov/Projet1&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
