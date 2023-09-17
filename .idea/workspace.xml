@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abecfdd3-2277-404b-b8f6-a2b3ca112265" name="Changes" comment="" />
+    <list default="true" id="abecfdd3-2277-404b-b8f6-a2b3ca112265" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Projet1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenAlexTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/OpenAlexTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cursor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2UOkGeiSWPNMSmM6MshLMEm6H46" />
   <component name="ProjectViewState">
@@ -43,5 +55,16 @@
       <updated>1692817919326</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/OpenAlexTest.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
