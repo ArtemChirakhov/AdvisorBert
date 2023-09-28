@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abecfdd3-2277-404b-b8f6-a2b3ca112265" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Projet1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet1.iml" afterDir="false" />
+    <list default="true" id="abecfdd3-2277-404b-b8f6-a2b3ca112265" name="Changes" comment="a bunch of improvements">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/App.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OpenAlexTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/OpenAlexTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cursor.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
@@ -25,6 +24,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,15 +58,15 @@
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/OpenAlexTest.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
