@@ -70,7 +70,7 @@ def LoadAuthor(date, pages, cites=20):
                 print(json_responce)
                 time.sleep(1.0)
         else:
-            cursor = json_responce['meta']['next_cursor'] 
+            cursor = json_responce['meta']['next_cursor']
             print(cursor)
             answer_list = json_responce['results']
             for i in range(len(answer_list)):
@@ -80,8 +80,9 @@ def LoadAuthor(date, pages, cites=20):
                         authors.append([answer_list[i]['authorships'][x]['author']['id'],
                                         answer_list[i]['authorships'][x]['author']['display_name']])
                         if len(answer_list[i]['authorships'][x]['institutions']):
-                            author_set[answer_list[i]['authorships'][x]['author']['id']] = \
-                            answer_list[i]['authorships'][x]['institutions'][0]['id']
+                            author_set[answer_list[i]['authorships'][x]['author']['id']] = {
+                                'id': answer_list[i]['authorships'][x]['institutions'][0]['id'],
+                                'display_name': answer_list[i]['authorships'][x]['author']['display_name']}
                         else:
                             if answer_list[i]['authorships'][x]['author']['id'] not in author_set:
                                 author_set[answer_list[i]['authorships'][x]['author']['id']] = None
