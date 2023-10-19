@@ -13,48 +13,63 @@ import numpy
 from sentence_transformers import SentenceTransformer, util
 from numpy import dot
 from numpy.linalg import norm
+import random
 
 app = Flask(__name__, static_folder='build', static_url_path='/')
-data = open("venv/data.json", 'r')
-abstract_vectors = numpy.loadtxt('1.csv')
-app.vectors = abstract_vectors
-app.data = json.load(data)
-searchResults = {'doctor': [{'info': {'name': "Billy Jones", 'description': "adghdgfgsfgfgaf", 'rating': 1, 'link': "ya.ru"}, 'lat': 18.52043, 'lng': 73.856743 }, {'info': {'name': "MD. Popov", 'description': "Greatest Medical Doctor Ever", 'rating': 100, 'link': "ya.ru"}, 'lat': 0, 'lng': 0 }],
-'scientist': [{'info': {'name': "Albert Einstein", 'description': "Greatest Scientist Ever", 'rating': 10, 'link': "https://ya.ru"}, 'lat': 23.52043, 'lng': 34.856743 }]}
+with open('../data1.json', 'r') as data_file:
+    app.data = json.load(data_file)
+with open('vectors.npy', 'rb') as vectors_file:
+    app.vectors = numpy.load(vectors_file)
+with open('authors_with_inst.json') as ins:
+    app.authors_enriched = json.load(ins)
 
-
-
-@app.route('/time')
-def get_current_time():
-    return {'time': time.time()}
+app.model = SentenceTransformer('msmarco-distilbert-base-v4')
 
 @app.route('/search/<searchQuery>')
 def get_current_search(searchQuery):
-    model = SentenceTransformer('msmarco-distilbert-base-v4')
-    query_embedding = model.encode(searchQuery)
-    for i in range(1):
-        vectors = dot(current_app.vectors, query_embedding)/(norm(query_embedding) * norm(current_app.vectors))
-        passages = []
-        for i in range(len(vectors)):
-            passages.append([vectors[i], i])
-        passages = sorted(passages, key=lambda x: x[0], reverse=True)
-        print(passages)
-        new_passages = []
-        for i in range(len(passages)):
-            if passages[i][0] >= 0:
-                print(passages[i][0])
-                new_passages.append(passages[i])
+    data = current_app.data
+    query_embedding = current_app.model.encode(searchQuery)
+    vectors = dot(current_app.vectors, query_embedding)/(norm(query_embedding) * norm(current_app.vectors, axis=1))
+    passages = []
+    for i in range(len(vectors)):
+        passages.append([vectors[i], i])
+    passages = sorted(passages, key=lambda x: x[0], reverse=True)
+    new_passages = []
+    for i in range(len(passages)):
+        if passages[i][0] >= 0.2:
+            new_passages.append(passages[i])
+        else:
+            break
+
+    author_count = {}
+    for m in range(len(new_passages)):
+        j = new_passages[m][1]
+        for i in range(len(data[j]['authorships'])):
+            if data[j]['authorships'][i][0] in author_count:
+                author_count[data[j]['authorships'][i][0]]['count'] += 1
+                author_count[data[j]['authorships'][i][0]]['publications'].append(data[j]['display-name'])
             else:
-                break
-        print(new_passages[0])
-        author_count = {}
-        for m in range(len(new_passages)):
-            j = new_passages[m][1]
-            for i in range(len(data[j]['authorships'])):
-                if data[j]['authorships'][i][0] in author_count:
-                    author_count[data[j]['authorships'][i][0]][0] += 1
-                    author_count[data[j]['authorships'][i][0]][1].append(j)
-                else:
-                    author_count[data[j]['authorships'][i][0]] = [1, [j]]
-            print(author_count[data[j]['authorships'][i][0]])
-        return sorted(author_count.items(), key=lambda item: item[1], reverse=True)
+                author_count[data[j]['authorships'][i][0]] = {
+                    'count': 1,
+                    'publications': [data[j]['display-name']]
+                }
+                [1, [data[j]]]
+    
+    return_authors = []
+    for author_id, data in author_count.items():
+        if (author_id in current_app.authors_enriched and data['count'] > 3 and 
+           current_app.authors_enriched[author_id]['inst']['lat'] is not None and 
+           current_app.authors_enriched[author_id]['inst']['lon'] is not None): 
+            return_authors.append({
+                'info': {
+                    'name': current_app.authors_enriched[author_id]['display_name'],
+                    'insitution': current_app.authors_enriched[author_id]['inst']['name']
+                },
+                'coord': {
+                    'lat': current_app.authors_enriched[author_id]['inst']['lat'] + random.random() * 0.1,
+                    'lng': current_app.authors_enriched[author_id]['inst']['lon'] + random.random() * 0.1
+                },
+                'publications': data['publications']
+            })
+
+    return return_authors
